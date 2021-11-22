@@ -1,0 +1,12 @@
+      SUBROUTINE FIND_NEXT(ISTART,IEND,ST,IRETURN,K)
+      INTEGER JK,ISTART,IEND,IRETURN
+      INTEGER ST(K)
+      IF(ISTART.LE.0)ISTART=1
+      DO JK=ISTART,IEND
+          IF(ST(JK).EQ.0)THEN
+               IRETURN=JK
+               EXIT
+          ENDIF
+      ENDDO
+      RETURN
+      END
